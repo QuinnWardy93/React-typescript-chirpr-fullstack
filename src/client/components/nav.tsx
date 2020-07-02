@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const Navbar: React.FC<navbarProps> = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
       <Link to= "/">
         Chirpr
       </Link>
@@ -19,15 +19,15 @@ const Navbar: React.FC<navbarProps> = () => {
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
+   
+        <ul className="navbar-nav mr-auto form-inline my-2 my-lg-0">
+          <li className="nav-item active ">
             <Link to="/AddChirp">
               Add Chirp 
             </Link>
           </li>
         </ul>
-      </div>
+      
     </nav>
   );
 };

@@ -47,24 +47,40 @@ const AddChirp: React.FC<ChirpCardProps> = (props) => {
   };
 
   return (
-    <form>
-      <label htmlFor="username">Username</label>
-      <input type="user" placeholder="Name" onChange={handleNameChange} className="form-control"></input>
-      <label htmlFor="message">Message</label>
-      <form></form>
-      <textarea
-        name="myTextBox"
-        onChange={handleMessageChange}
-        className="formcontrol"
-        cols={50}
-        rows={15}
-       placeholder="enter your message"
-      ></textarea>
-
-      <button type="submit" onClick={addChirp} className="addBtn btn-success">
-        Add Chirp
-      </button>
-    </form>
+    <div className="container">
+      <div className="card-body shadow">
+        <form>
+          <label htmlFor="username">Username</label>
+          <input
+            type="user"
+            placeholder="Name"
+            onChange={handleNameChange}
+            className="form-control"
+          ></input>
+          <div className="row">
+          <label htmlFor="message">Message</label>
+          <form className="col-12">
+            <textarea
+              name="myTextBox"
+              onChange={handleMessageChange}
+              className="form-control"
+              cols={50}
+              rows={15}
+              placeholder="enter your message"
+            ></textarea>
+          </form>
+          <button
+            type="submit"
+            onClick={addChirp}
+            className="addBtn btn-success"
+          >
+            Add Chirp
+          </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
   );
 };
 

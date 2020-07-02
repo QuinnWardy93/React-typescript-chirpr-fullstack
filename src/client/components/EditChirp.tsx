@@ -60,6 +60,8 @@ const EditChirp: React.FC<ChirpCardProps> = (props) => {
   };
 
   return (
+    <div className="container">
+      <div className="card-body shadow"> 
     <form>
       <label htmlFor="username">Username</label>
       <input
@@ -78,9 +80,7 @@ const EditChirp: React.FC<ChirpCardProps> = (props) => {
           cols={50}
           rows={15}
         ></textarea>
-        <br />
       </form>
-
       <button type="submit" onClick={editChirp} className="editBtn btn-primary">
         Edit Chirp
       </button>
@@ -88,6 +88,8 @@ const EditChirp: React.FC<ChirpCardProps> = (props) => {
         Delete Chirp
       </button>
     </form>
+    </div>
+    </div>
   );
 };
 
