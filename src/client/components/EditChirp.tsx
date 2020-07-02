@@ -81,10 +81,10 @@ const EditChirp: React.FC<ChirpCardProps> = (props) => {
           rows={15}
         ></textarea>
       </form>
-      <button type="submit" onClick={editChirp} className="editBtn btn-primary">
+      <button type="submit" onClick={editChirp} className="editBtn btn btn-outline-primary">
         Edit Chirp
       </button>
-      <button type="submit" onClick={deleteChirp} className="deleteBtn btn-danger">
+      <button type="submit" onClick={deleteChirp} className="deleteBtn btn btn-outline-danger">
         Delete Chirp
       </button>
     </form>

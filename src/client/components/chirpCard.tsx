@@ -11,7 +11,7 @@ const chirpCard: React.FC<ChirpCardProps> = (props) => {
         <h6 className="card-subtitle mb-2 text-muted">
           {props.chirps.message}
         </h6>
-        <button className="btn-white ">
+        <button className="btn btn-outline-primary ">
           <Link to={`/editchirp/${props.chirps.id}/`}>Admin Options</Link>
         </button>
       </div>

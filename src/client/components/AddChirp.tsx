@@ -72,7 +72,7 @@ const AddChirp: React.FC<ChirpCardProps> = (props) => {
           <button
             type="submit"
             onClick={addChirp}
-            className="addBtn btn-success"
+            className="addBtn btn btn-online-success"
           >
             Add Chirp
           </button>
