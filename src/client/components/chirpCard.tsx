@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import { ChirpCardProps } from "../utils/types";
 
 const chirpCard: React.FC<ChirpCardProps> = (props) => {
+  
   return (
-    <div className="row">
+    <div className="row" id="container">
     <div key={props.chirps.id} className="card m-4 col-3">
       <div className="card-body shadow">
         <h5 className="card-title">{props.chirps.username}</h5>

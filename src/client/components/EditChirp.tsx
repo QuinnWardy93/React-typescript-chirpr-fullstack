@@ -53,7 +53,6 @@ const EditChirp: React.FC<ChirpCardProps> = (props) => {
     }).then((response) =>
       response.json().then((json) => {
         return json;
-          
       })
     );
     history.push("/");
@@ -61,34 +60,42 @@ const EditChirp: React.FC<ChirpCardProps> = (props) => {
 
   return (
     <div className="container">
-      <div className="card-body shadow"> 
-    <form>
-      <label htmlFor="username">Username</label>
-      <input
-        type="user"
-        className="form-control"
-        value={username}
-        onChange={handleNameChange}
-      ></input>
-      <label htmlFor="message">Message</label>
-      <form>
-        <textarea
-          name="myTextBox"
-          value={message}
-          onChange={handleMessageChange}
-          className="form-control"
-          cols={50}
-          rows={15}
-        ></textarea>
-      </form>
-      <button type="submit" onClick={editChirp} className="editBtn btn btn-outline-primary">
-        Edit Chirp
-      </button>
-      <button type="submit" onClick={deleteChirp} className="deleteBtn btn btn-outline-danger">
-        Delete Chirp
-      </button>
-    </form>
-    </div>
+      <div className="card-body shadow">
+        <form>
+          <label htmlFor="username">Username</label>
+          <input
+            type="user"
+            className="form-control"
+            value={username}
+            onChange={handleNameChange}
+          ></input>
+          <label htmlFor="message">Message</label>
+          <form>
+            <textarea
+              name="myTextBox"
+              value={message}
+              onChange={handleMessageChange}
+              className="form-control"
+              cols={50}
+              rows={15}
+            ></textarea>
+          </form>
+          <button
+            type="submit"
+            onClick={editChirp}
+            className="editBtn btn btn-outline-primary"
+          >
+            Edit Chirp
+          </button>
+          <button
+            type="submit"
+            onClick={deleteChirp}
+            className="deleteBtn btn btn-outline-danger"
+          >
+            Delete Chirp
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

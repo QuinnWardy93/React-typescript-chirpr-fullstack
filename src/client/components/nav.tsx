@@ -2,6 +2,9 @@ import * as React from "react";
 import { Link } from "react-router-dom"
 
 const Navbar: React.FC<navbarProps> = () => {
+  const mystyle= {
+    marginLeft: 100
+  }
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-dark">
       <Link to= "/">
@@ -20,8 +23,8 @@ const Navbar: React.FC<navbarProps> = () => {
       </button>
 
    
-        <ul className="navbar-nav mr-auto form-inline my-2 my-lg-0">
-          <li className="nav-item active ">
+        <ul className="navbar-nav"style={mystyle}>
+          <li className="nav-item active margin-left-50">
             <Link to="/AddChirp">
               Add Chirp 
             </Link>
